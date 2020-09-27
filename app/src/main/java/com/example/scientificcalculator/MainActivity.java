@@ -96,32 +96,36 @@ public class MainActivity extends AppCompatActivity {
     public void btnClick_add(View view) {
         sign = "+";
         value1 = input.getText().toString();
+
+        signBox.setText(input.getText()+"+");
         input.setText(null);
-        signBox.setText("+");
         hasDot = false;
     }
 
     public void btnClick_subtract(View view) {
         sign = "-";
         value1 = input.getText().toString();
+
+        signBox.setText(input.getText()+"-");
         input.setText(null);
-        signBox.setText("-");
         hasDot = false;
     }
 
     public void btnClick_multiply(View view) {
         sign = "*";
         value1 = input.getText().toString();
+
+        signBox.setText(input.getText()+"×");
         input.setText(null);
-        signBox.setText("×");
         hasDot = false;
     }
 
     public void btnClick_divide(View view) {
         sign = "/";
         value1 = input.getText().toString();
+
+        signBox.setText(input.getText()+"÷");
         input.setText(null);
-        signBox.setText("÷");
         hasDot = false;
     }
 
@@ -202,31 +206,31 @@ public class MainActivity extends AppCompatActivity {
                 case "log":
                     value1 = input.getText().toString();
                     num1 = Double.parseDouble(value1);
-                    input.setText(Math.log10(num1) + "");
+                    signBox.setText(Math.log10(num1) + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "ln":
                     value1 = input.getText().toString();
                     num1 = Double.parseDouble(value1);
-                    input.setText(Math.log(num1) + "");
+                    signBox.setText(Math.log(num1) + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "power":
                     num1 = Double.parseDouble((value1));
                     value2 = input.getText().toString();
                     num2 = Double.parseDouble(value2);
-                    input.setText(Math.pow(num1, num2) + "");
+                    signBox.setText(Math.pow(num1, num2) + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "root":
                     value1 = input.getText().toString();
                     num1 = Double.parseDouble((value1));
-                    input.setText(Math.sqrt(num1) + "");
+                    signBox.setText(Math.sqrt(num1) + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "factorial":
                     value1 = input.getText().toString();
@@ -238,66 +242,66 @@ public class MainActivity extends AppCompatActivity {
                         i--;
                     }
 
-                    input.setText(num1 + "");
+                    signBox.setText(num1 + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "sin":
                     value1 = input.getText().toString();
                     num1 = Double.parseDouble((value1));
-                    input.setText(Math.sin(num1) + "");
+                    signBox.setText(Math.sin(num1) + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "cos":
                     value1 = input.getText().toString();
                     num1 = Double.parseDouble((value1));
-                    input.setText(Math.cos(num1) + "");
+                    signBox.setText(Math.cos(num1) + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "tan":
                     value1 = input.getText().toString();
                     num1 = Double.parseDouble((value1));
-                    input.setText(Math.tan(num1) + "");
+                    signBox.setText(Math.tan(num1) + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "+":
                     value2 = input.getText().toString();
                     num1 = Double.parseDouble(value1);
                     num2 = Double.parseDouble(value2);
                     result = num1 + num2;
-                    input.setText(result + "");
+                    signBox.setText(result + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "-":
                     value2 = input.getText().toString();
                     num1 = Double.parseDouble(value1);
                     num2 = Double.parseDouble(value2);
                     result = num1 - num2;
-                    input.setText(result + "");
+                    signBox.setText(result + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "*":
                     value2 = input.getText().toString();
                     num1 = Double.parseDouble(value1);
                     num2 = Double.parseDouble(value2);
                     result = num1 * num2;
-                    input.setText(result + "");
+                    signBox.setText(result + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
                 case "/":
                     value2 = input.getText().toString();
                     num1 = Double.parseDouble(value1);
                     num2 = Double.parseDouble(value2);
                     result = num1 / num2;
-                    input.setText(result + "");
+                    signBox.setText(result + "");
                     sign = null;
-                    signBox.setText(null);
+                    input.setText(null);
                     break;
             }
 
